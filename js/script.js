@@ -27,7 +27,16 @@ for (let i = 1; i< gruppoBici.length; i++){
     }
 }
 
-const {peso} = pesoMinimo
+const {nome,peso} = pesoMinimo
 console.log(peso);
 
+document.getElementById('stampa').innerHTML =
 
+`
+<ul>
+<li>${nome}</li>
+
+<li>${peso}</li>
+
+</ul>
+`
