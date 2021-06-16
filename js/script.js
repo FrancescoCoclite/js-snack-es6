@@ -34,9 +34,46 @@ document.getElementById('stampa').innerHTML =
 
 `
 <ul>
-<li>${nome}</li>
+<li> nome:  ${nome}</li>
 
-<li>${peso}</li>
+<li> peso: ${peso}</li>
 
 </ul>
 `
+// Snack2 Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti. Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0. Generare numeri random al posto degli 0 nelle proprietà: Punti fatti e falli subiti. (utilizzate le arrow function). Infine usando la destrutturazione creiamo un nuovo array i cui elementi sono sempre degli oggetti che contengono solo nomi e falli subiti e stampiamo tutto in console
+
+
+var squadre = [
+    {
+        nome : 'milan',
+        punti : 0,
+        falli : 0
+
+    },
+    {
+        nome : 'juventus',
+        punti : 0,
+        falli : 0
+
+    },
+    {
+        nome : 'inter',
+        punti : 0,
+        falli : 0
+
+    },
+];
+
+
+for(var i =0; i<squadre.length; i++){
+    const puntiRandom = () => squadre[i].punti = Math.floor(Math.random() * 10);
+    const falliRandom = () => squadre[i].falli = Math.floor(Math.random() * 10);
+    puntiRandom();
+    falliRandom();
+};
+
+console.log(squadre);
+
+
+
+
